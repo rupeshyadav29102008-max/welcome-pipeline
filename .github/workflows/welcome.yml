@@ -1,0 +1,15 @@
+name: Welcome Message Pipeline
+on:
+ push:
+  branches:
+    - main
+jobs:
+ welcome-jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Display Welcome banner
+      run: echo "Welcome to DevOps"
+    - name: Display contents of welcome.txt
+      run: cat welcome.txt
